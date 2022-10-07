@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form) method get, post & autocomplete</title>
+</head>
+<body>
+    <h2>HTML form method</h2>
+    <!-- 
+        method
+        get     : 서버로 데이터를 보낼 때, url에 포함하여 보내는 방식.
+            => 구글이나 네이버 등 검색 엔진에서 특정 데이터를 검색할  때 사용됨.
+            => default 방식.
+
+        post    : 서버로 데이터를 보낼 때, 메시지 본분에 포함하여 보내는 방식
+                  (url에서 데이터가 보이지 않음.)
+            => url에 노출되면 안 되는 데이터를 서버에 전송할 때 사용함.
+            => 파일 사이즈가 큰 경우(데이터 내용이 url에 담겨 전송하기엔 너무 긴 경우) 사용함. 
+        
+        autocomplete="on"
+        : 과거 입력 내용 보여줌. 
+     -->
+    <form action="https://www.w3schools.com/html/html_forms.asp/action_page.php" 
+            method="get" autocomplete="on">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <form action="https://www.w3schools.com/html/html_forms.asp/action_page.php" method="post">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

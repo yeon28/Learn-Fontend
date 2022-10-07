@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From) </title>
+</head>
+
+<body>
+
+    <h2>The select Element</h2>
+
+    <p>The select element defines a drop-down list:</p>
+
+    <form action="">
+        <label for="cars">Choose a car:</label>
+        <!-- 
+            select  : 여러가지 옵션을 스크롤해 선택하는 형식 tag.
+            option  : select 태그의 안에 들어있는 옵션을 선언하는 tag.
+
+                => 서버에 데이터 전송방식 key=value
+                => key는 select의 name의 값이고,  value는 option의 값.
+
+        size        : 화면에 보이는 옵션 갯수.
+        multiple    : 서버에 여러개의 데이터 값을 보내는 attribute.
+     -->
+        <select name="cars" id="cars" size="3" multiple>
+            <option value="volvo">Solvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+        
+        <br><br>
+        
+        <!-- 
+            textarea    
+            : 여러 line 텍스트를 입력하여 서버로 전송할 때 사용하는 태그.
+
+            row     : 보여질 행의 갯수 설정 attribute.
+            cols    : colum의 크기(btye)를 지정하는 attribute.
+         -->
+        <textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+
+</html>

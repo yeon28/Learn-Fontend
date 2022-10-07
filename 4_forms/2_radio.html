@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form) input type radio</title>
+</head>
+<body>
+    
+<h2>Radio Buttons</h2>
+
+<p>Choose your favorite Web language:</p>
+
+    <form action="https://www.w3schools.com/html/html_forms.asp/action_page.js">
+        <!-- 
+            radio는 여러 리스트 중에서 하나만 고를 수 있는 버튼 타입
+
+            radio type은 name을 기준으로 그룹함.
+                => key는 name에 지정한 value값을 갖음.
+            => name이 같은 radio타입을 하나의 그룹으로 보고, 그 중에서 하나만 선택 가능함.
+         -->
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="js" name="fav_language" value="JavaScript">
+        <label for="js">JavaScript</label><br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

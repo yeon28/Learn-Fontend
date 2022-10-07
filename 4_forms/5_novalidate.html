@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form) novalidate</title>
+</head>
+
+<body>
+    <h1>The form novalidate attribute</h1>
+    <p>The novalidate attribute indicates that the form input is not to be validated on submit:</p>
+
+    <!-- 
+        type이 특정 형식이 있는 경우(email인 경우),
+        기본적으로 형식이 맞는 문자열이 입력되었는지 체크함.(=validate)
+
+        novalidate  : 기본적으로 설정된 문자열 형식의 에러를 체크를 무시하는 attribute.
+     -->
+    <form action="/action_page.php">
+    <!-- <form action="/action_page.php" novalidate> -->
+        <label for="email">Enter your email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>

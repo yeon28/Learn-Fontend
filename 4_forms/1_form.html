@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form tag</title>
+</head>
+<body>
+
+    <h2>HTML Forms</h2>
+    <!-- action : 웹서버에 있는 application program을 value값(->URL)으로 호출함. -->
+    <form action="/action_page.php">
+        <!-- 
+            value   : 실제 화면에 기제될 내용. 
+                => 버튼 타입이면 버튼 이름이고 텍스트 타입이면 초기 값을 의미함.
+
+            type    : input 할 데이터의 타입. 
+                => text, radio, checkbox, submit, botton,,,이 있음.
+            
+            lable for   : for의 value가 input 태그의 id attribute value를 의미함.
+            
+            submit  : 누름과 동시에 데이터를 서버로 전송하는 버튼.
+                => 서버에 데이터를 전송할 때, key가 value로 전달됨.
+                    ex) <input type="text" name="fname" value="John">이면,
+                    fname="John"으로 전달함.
+                => 서버에 key=value&key=value... 형태로 데이터를 전달함.
+                    ex) 현재 작성된 from은 fname=John&lname=Doe로 전달됨.
+         -->
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>If you click the "Submit" button, 
+        the form-data will be sent to a page called 
+        "/action_page.php".</p>
+
+</body>
+</html>
