@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text formatting</title>
+</head>
+
+<body>
+    <p>This is normal text</p>
+
+    <hr>
+
+    <!-- 
+        b       : bold 
+        strong  : strong =>semantic tag
+        
+        => <b> <strong>의 적용 결과는 동일함. 
+            하지만, 의미(semantic)으로는 <strong>태그는 중요하다는 의미를 갖음.
+
+                => <stong style="color:red;">로 css파일에서 중요함을 강조하게 됐을 때, 
+                    <b>와 <strong>을 구별 없이 사용했다면, 문제 발생함. 
+     -->
+    <p>This text is <b>bold</b></p>
+    <p><strong>This text is important!</strong></p>
+
+    <hr>
+
+    <!-- 
+        i       : italic
+        em      : emphasize =>semantic tag
+    -->
+    <p><i>This text is italic</i></p>
+    <p><em>This text is emphasized</em></p>
+
+    <hr>
+
+    <!-- 
+        samll   : 더 작은 글씨 
+        mark    : 형광펜 강조
+        del     : 텍스트 삭제 표시
+     -->
+    <p><small>This is some smaller text.</small></p>
+    <p>Do not forget to buy <mark>milk</mark> today.</p>
+    <p>My favorite color is <del>blue</del> red.</p>
+
+    <!-- 
+        sub     : subscript 
+        sup     : superscript
+     -->
+    <p>This is <sub> subscript</sub> and <sup>superscript</sup></p>
+    <p>subscript i<sub>2</sub> and superscript mc<sup>2</sup></p>
+
+</body>
+
+</html>

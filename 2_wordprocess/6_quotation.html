@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quotation) blockquote, q, cite, abbr, address, ltr, rtl </title>
+</head>
+
+<body>
+    <!-- 
+        blockquote      : 긴 인용 문장을 블록형태로 적용해 사용할 때 쓰는 태그.
+        cite            : 인용한 html이나 resource 입력.
+     -->
+    <p>Here is a quote from WWF's website:</p>
+
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+        For 50 years, WWF has been protecting the future of nature.
+        The world's leading conservation organization,
+        WWF works in 100 countries and is supported by
+        1.2 million members in the United States and
+        close to 5 million globally.
+    </blockquote>
+
+    <hr>
+
+    <!-- 
+        q       : quotation 짧은 인용문을 입력할 때 사용함.
+     -->
+    <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q> => (use 'q' tag)</p>
+    <p>WWF's goal is to: "Build a future where people live in harmony with nature."</p>
+
+    <hr>
+
+    <!-- 
+        abbr    : abbreviation 약어 
+     -->
+    <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+    <hr>
+
+    <!-- 
+        address : iteric으로 작성된 주소 semantic 태그 
+     -->
+    <address>
+        Written by John Doe.<br>
+        Visit us at:<br>
+        Example.com<br>
+        Box 564, Disneyland<br>
+        USA
+    </address>
+
+    <hr>
+
+    <!-- 
+        cite    : 작품명을 표시할 때 사용하는 semantic 태그
+     -->
+    <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+
+    <hr>
+
+    <!-- 
+        rtl     : right to left
+        ltr     : left to right
+    -->
+    <p>rtl : <bdo dir="rtl">This text will be written from right to left</bdo></p>
+    <p>ltr : <bdo dir="ltr">This text will be written from right to left</bdo></p>
+
+</body>
+
+</html>

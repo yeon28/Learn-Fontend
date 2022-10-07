@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>link</title>
+</head>
+
+<body>
+
+    <h2>The target Attribute</h2>
+    <!--
+        tatget              : 받은 데이터를 보내는 곳 설정 할 때 사용하는 태그.
+
+        target="_blank"     : 현재 페이지에서 링크 클릭 시 , 새 탭에서 링크 열기
+        
+        target="_self"      : 현재 페이지에서 링크 클릭 시 , 현재 탭(=현재 문서 페이지)에서 링크 열기
+            => 디폴트 값으로 설정돼 있음.
+     -->
+    <a href="https://velog.io/@dingcomiii" target="_blank">target="_blank" >>> visit my velog!</a>
+    <br>
+    <a href="https://velog.io/@dingcomiii" target="_self"> target="_self" >>> visit my velog!</a>
+    <br>
+
+    <hr>
+
+    <h2>Image as a Link</h2>
+    <p>The image below is a link. Try to click on it.</p>
+
+    <a href="https://velog.io/@dingcomiii">
+        <img src="../imgs/smiley.gif" alt="dingcomiii velog link" style="width:42px;height:42px;">
+    </a>
+
+    <hr>
+
+    <h2>Link to an Email Address</h2>
+
+    <p>To create a link that opens in the user's email program (to let them send a new email), use mailto: inside the
+        href attribute:</p>
+
+    <p><a href="mailto:someone@example.com">Send email</a></p>
+
+    <hr>
+
+    <h2>Button as a Links</h2>
+    <p>Click the button to go to the my velog.</p>
+
+    <button onclick="document.location='https://velog.io/@dingcomiii'">my velog</button>
+
+    <hr>
+
+    <h2>Link Titles</h2>
+    
+    <a href="https://velog.io/@dingcomiii" title="go to dingcomiii velog!">???link????</a>
+
+    <hr>
+    
+
+
+</body>
+
+</html>
