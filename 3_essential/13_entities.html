@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>entities, symbols </title>
+</head>
+
+<body>
+
+    <h1>HTML Entity Example</h1>
+    <h2>HTML space ?? 22</h2>
+
+    <!-- 
+        Entity는 font로 간주해 사용가능함.
+            => font-size로 크기를 조정할 수 있고, 화면에서 깨지지 않는 장점이 있음.
+
+        &nbsp;     : non-breaking space 쪼개지지 않는 빈칸
+        &#160;     : non-breaking space 쪼개지지 않는 빈칸
+    -->
+    <h2>non-breaking space: te&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;st</h2>
+    <h2>non-breaking space: te&#160;&#160;&#160;&#160;&#160;st</h2>
+    <h2>non-breaking space: 10&nbsp;km/h</h2>
+
+    <!-- 
+        html symbols
+
+     -->
+    <span style='font-size:100px;'>&#881;</span>
+    <p>I will display &#881;</p>
+    <p>I will display &#x371;</p>
+
+</body>
+
+</html>
