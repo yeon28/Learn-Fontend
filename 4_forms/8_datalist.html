@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From) datalist tag</title>
+</head>
+
+<body>
+    <h2>The datalist Element</h2>
+
+    <p>The datalist element specifies a list of pre-defined options for an input element.</p>
+
+    <form action="/action_page.php">
+        <!-- input tag의 list attribute의 value값과 동일한 id 값을 갖은 datalist tag에서 데이터 가져옴. -->
+        <input list="browsers" name="browser">
+        
+        <!-- 
+            datalist    : 직접 입력하면 입력 값과 비슷한 옵션을 제시하는 형식 tag.
+                => 서버에 데이터 전송할 때 key=value 형식으로 전송함. 
+                key는 input 태그의 name의 value값,
+                value는 datalist태그 안에 있는 option의 value 값.
+         -->
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+
+        <input type="submit">
+    </form>
+
+</body>
+
+</html>

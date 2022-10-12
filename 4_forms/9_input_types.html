@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form) input tag types</title>
+</head>
+
+<body>
+
+    <h2>Reset Button</h2>
+
+    <p>The <strong>input type="reset"</strong> defines a reset button that resets all form values to their default
+        values:</p>
+
+    <form action="/action_page.php">
+        <fieldset>
+            <legend>Personal Infomation</legend>
+
+            <!-- 
+                disabled   : 화면에 표시되지만, 입력/수정 불가능함. 
+                readonly   : 화면에 표시되지만, 입력/수정 불가능함.
+
+                +) disabled와 readonly의 차이점
+                    disabled는 설정된 태그 자체를 무력화 시킴.
+                    reset을 disabled하면 사용할 수 없음.               
+            -->
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John" disabled><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe" readonly><br><br>
+
+            <label for="favcolor">Select your favorite color:</label>
+            <input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br>
+
+            <input type="submit" value="Submit">
+
+            <!-- 
+                reset   : 초기값 상태로 변환함.
+                    => input 태그 type reset은 default value 값은 웹브라우저의 언어 설정에 맞는 언어로 표현됨.
+            -->
+            <input type="reset" value="reset" disabled>
+
+        </fieldset>
+    </form>
+
+
+    <br><br>
+
+
+    <h2>Date Field</h2>
+
+    <p>The <strong>input type="date"</strong> is used for input fields that should contain a date.</p>
+
+    <fieldset>
+        <br>
+        <form action="/action_page.php">
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday" value="2002-01-01" min="2000-01-01" max="2021-12-31">
+
+            <br>
+
+            <label for="birthday">Birthday-time:</label>
+            <input type="datetime-local" id="birthday-time" name="birthday-time" min="2000-01-01" max="2021-12-31">
+
+            <br><br>
+
+            <label for="myfile">Select file:</label>
+            <input type="file" id="myfile" name="myfile">
+
+            <br><br>
+
+            <!--
+                hidden  : 브라우저에서는 보여지지 않지만 서버로 데이터를 전달하는 input 태그의 type
+                    => input태그 type hidden은 frontend에서 사용자의 입력값 없이 program 자체적으로 서버로 데이터를 전달하고자 할 때 사용함.
+                    ex) html 화면에서 생년월일을 사용자가 입력하면 프로그램 내부적으로 성년인지 여부
+                        또는 성별 등의 정보를 서버로 전달할 필요가 있는 경우 등... 
+            -->
+            <input type="hidden" name="custId" id="custId">
+
+            <!-- 
+                number  : 숫자 값만 받는 input 태그 type
+
+                required    : submit하기 전에 필수 입력해야는 input 지정 attribute
+             -->
+            <label for="quantity">Quantity (between 1 and 5) : </label>
+            <input type="number" id="quantity" name="quantity" min="1" max="5" required>
+
+            <br><br>
+
+            <!-- input 태그 type image는 submit을 대체할 때 활용 가능함. -->
+            <input type="image" src="../imgs/img_submit.gif" alt="submit" width="48" height="48">
+            <!-- <input type="submit" value="Submit"> -->
+
+        </form>
+
+
+        <p><strong>Note:</strong> type="date" is not supported in Internet Explorer 11 or prior Safari 14.1.</p>
+    </fieldset>
+
+
+</body>
+
+</html>

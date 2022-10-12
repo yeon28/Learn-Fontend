@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form) input tag attributes</title>
+</head>
+
+<body>
+
+    <h2>Reset Button</h2>
+
+    <p>The <strong>input type="reset"</strong> defines a reset button that resets all form values to their default
+        values:</p>
+
+    <form action="/action_page.php">
+        <fieldset>
+            <legend>Personal Infomation</legend>
+
+            <!-- 
+                disabled   : 화면에 표시되지만, 입력/수정 불가능함. 
+                readonly   : 화면에 표시되지만, 입력/수정 불가능함.
+
+                +) disabled와 readonly의 차이점
+                    disabled는 설정된 태그 자체를 무력화 시킴.
+                    reset을 disabled하면 사용할 수 없음.               
+            -->
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John" disabled><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe" readonly><br><br>
+
+            <label for="favcolor">Select your favorite color:</label>
+            <input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br>
+
+            <input type="submit" value="Submit">
+
+            <input type="reset" value="reset" disabled>
+
+        </fieldset>
+    </form>
+
+
+    <br><br>
+
+
+    <h2>Date Field</h2>
+
+    <p>The <strong>input type="date"</strong> is used for input fields that should contain a date.</p>
+
+    <fieldset>
+        <br>
+        <form action="/action_page.php">
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday" value="2002-01-01" min="2000-01-01" max="2021-12-31">
+
+            <br>
+
+            <label for="birthday">Birthday-time:</label>
+            <input type="datetime-local" id="birthday-time" name="birthday-time" 
+                min="2000-01-01" max="2021-12-31">
+
+            <br><br>
+
+            <!-- 
+                pattern     : 해당 태그의 입력 조건을 지정해주는 attribute
+                placeholder : 입력될 값에대한 짧은 힌트를 명시해주는 attribute
+
+                autofocus   : 브라우저 접속시 carat(커서)을 맨 처음 나타낼 tag를 지정하는 attribute
+             -->
+            <label for="country_code">Country code:</label>
+            <input type="text" id="country_code" name="country_code"
+                pattern="[A-Za-z]{3}"
+                placeholder="abc" title="Three letter country code"
+                autofocus>
+            
+            <br><br>
+
+
+            <!-- 
+                multiple    : 여러개 선택 가능함 attribute.
+             -->
+            <label for="myfile">Select file:</label>
+            <input type="file" id="myfile" name="myfile" multiple>
+
+            <br><br>
+
+            <input type="hidden" name="custId" id="custId">
+
+            <!-- 
+                required    : submit하기 전에 필수 입력해야는 input 지정 attribute
+             -->
+            <label for="quantity">Quantity (between 1 and 5) : </label>
+            <input type="number" id="quantity" name="quantity" min="1" max="5" required>
+
+            <br><br>
+
+            <input type="image" src="../imgs/img_submit.gif" alt="submit" width="48" height="48">
+            <!-- <input type="submit" value="Submit"> -->
+
+        </form>
+    </fieldset>
+
+
+</body>
+
+</html>
