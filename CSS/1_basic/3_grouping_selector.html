@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* style sheet  : html file에 style tag안에 포함되어 있음
+            => internal style sheet
+                => 가급적 external style sheet만 사용하되, 꼭 필요한 경우만 internal style sheet사용.*/
+        /* grouping selector   
+            : 여러개의 selector를 ','를 사용하여 grouping해 공통 style를 지정.*/
+        h1, h2, p{
+            text-align: center;
+            color: red;
+        }
+        .a{
+            font-size: 30px;
+        }
+        .b{
+            color: aqua;
+        }
+
+        /* h2.a
+            : h2 태그와 class가 'a'인 복합 selector */
+        h2.a{ 
+            background-color: beige;
+        }
+    </style>
+    <title>Grouping Selector</title>
+</head>
+
+<body>
+    <!-- class attribute에 value가 2개 존재함.
+            => 'a' 'b' 존재함. -->
+    <h1 class="a b">Hello World!</h1>
+    <h2 class="a">Smaller heading!</h2>
+    <p class="b">This is a paragraph.</p>
+
+</body>
+
+</html>

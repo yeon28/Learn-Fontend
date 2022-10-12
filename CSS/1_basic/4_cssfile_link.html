@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/mystyle.css">
+    <style>
+        /* internal style sheet 내용이 external style sheet보다 우선 순위 높음
+            => cascading rule */
+        h1, p{
+            color: orange;
+        }
+    </style>
+    <title>Extarnal Style Sheet) how to link css file, inline&external style sheet Cascading rule </title>
+</head>
+
+<body>
+    <h1>This is a heading</h1>
+    <p>This is a paragraph.</p>
+
+    <!-- 
+        inline style    : tag 안에 style attribute를 사용하여 style 작성함
+            => 사용 비추천, 꼭 필요한 경우인지 재검토할 것.
+        
+        +) inline style sheet는 CSS 최고 우선순위를 갖음. 
+            external로 style sheet를 지정했더라도 우선순위에 의해 inline style로 적용됨 
+     -->
+    <h1 style="color:blue;text-align:center;">This is 2nd heading</h1>
+    <p style="color:red;">This is a paragraph.</p>
+</body>
+
+</html>
