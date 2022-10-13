@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+        body{
+            text-align: center;
+            font-family: 'Nanum Myeongjo', serif;
+            font-weight: bold;
+        }
+
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        th, td{
+            border: 1px solid black;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+            padding: 10px 20px;
+        }
+
+        .tb_bottomHidden{
+            border-bottom: hidden;
+        }
+
+        th:first-child,
+        td:first-child{
+            border-left: none;
+        }
+      
+    </style>
+    <title>1013) practice3</title>
+</head>
+
+<body>
+    
+    <fieldset style="border: none;">
+        <legend>Specification values: Steel, Castings, Class B</legend>
+
+        <table align="center">
+            <tr>
+                <th rowspan="2">Grade.</th>
+                <th rowspan="2">Yield Porint.</th>
+                <th colspan="2">Ultimate tensile strength</th>
+                <th rowspan="2">Per cent elong. 50.8mm</th>
+                <th rowspan="2">Per cent reduct. area.</th>
+            </tr>
+            <tr style="border-bottom: 2.5px solid black;">
+                <th>kg/mm<sup>2</sup></th>         
+                <th>lb/in<sup>2</sup></th>         
+            </tr>
+    
+            <tr class="tb_bottomHidden" >
+                <td>Hard</td>
+                <td>0.45 ultimate</td>
+                <td>56.2</td>
+                <td>80,000</td>
+                <td>15</td>
+                <td>20</td>
+            </tr>
+    
+            <tr class="tb_bottomHidden">
+                <td>Medium</td>
+                <td>0.45 ultimate</td>
+                <td>49.2</td>
+                <td>70,000</td>
+                <td>18</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Soft</td>
+                <td>0.45 ultimate</td>
+                <td>42.2</td>
+                <td>60,000</td>
+                <td>22</td>
+                <td>30</td>
+            </tr>
+        </table>
+    
+    </fieldset>
+   
+</body>
+
+</html>

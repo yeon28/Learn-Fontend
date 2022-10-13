@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table,
+        th,
+        td {
+            border-style: ridge;
+            border-spacing: 0px;
+        }
+    </style>
+    <title>1013) practice1</title>
+</head>
+
+<body>
+    <img src="imgs/webDeveloper.png" alt="" width="250px">
+
+    <div>
+        <h1>About</h1>
+        <p>
+            It can be intimidating for women to learn and ask questions when they are in an <b>extreme minority</b>.
+            While open and welcoming. Today's budding developer community is up to <b>91% male</b>.
+            If we can empower more females with the confidence in their texchnological capabilitise
+            <i>we can begin to change the Jandscape.</i>
+        </p>
+    </div>
+
+    <br>
+    <br>
+
+    <div>
+        <h2>Our Location</h2>
+
+        <ul>
+            <li>USA</li>
+            <ul>
+
+                <li>
+                    <a
+                        href="https://www.google.com/maps/place/%EB%AF%B8%EA%B5%AD+%EB%89%B4%EC%9A%95/@40.6971812,-74.5387257,9z/data=!3m1!4b1!4m5!3m4!1s0x89c24fa5d33f083b:0xc80b8f06e177fe62!8m2!3d40.7127753!4d-74.0059728">
+                        New York
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.google.com/maps/search/Columbus/@40.6965673,-74.5387304,9z/data=!3m1!4b1">
+                        Columbus
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.google.com/maps/search/Austin/@40.6965673,-74.5387304,9z/data=!3m1!4b1">
+                        Austin
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://www.google.com/maps/place/%EB%AF%B8%EA%B5%AD+%ED%8E%9C%EC%8B%A4%EB%B2%A0%EC%9D%B4%EB%8B%88%EC%95%84+%ED%95%84%EB%9D%BC%EB%8D%B8%ED%94%BC%EC%95%84/@40.0026884,-75.3975224,10z/data=!3m1!4b1!4m5!3m4!1s0x89c6b7d8d4b54beb:0x89f514d88c3e58c1!8m2!3d39.9525839!4d-75.1652215">
+                        Philly
+                    </a>
+                </li>
+            </ul>
+
+            <br>
+
+            <li>World</li>
+            <ul>
+                <li>
+                    <a
+                        href="https://www.google.com/maps/place/%EC%BA%90%EB%82%98%EB%8B%A4+%EC%98%A8%ED%83%80%EB%A6%AC%EC%98%A4+%EC%98%A4%ED%83%80%EC%99%80/@45.2466345,-76.9185222,8z/data=!3m1!4b1!4m5!3m4!1s0x4cce05b25f5113af:0x8a6a51e131dd15ed!8m2!3d45.4215296!4d-75.6971931">
+                        Ottawa
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://www.google.com/maps/place/%EC%98%A4%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%BC%EB%A6%AC%EC%95%84+%EB%89%B4%EC%82%AC%EC%9A%B0%EC%8A%A4%EC%9B%A8%EC%9D%BC%EC%8A%A4+%EC%A3%BC+%EC%8B%9C%EB%93%9C%EB%8B%88/@-33.8458415,150.3729328,9z/data=!3m1!4b1!4m5!3m4!1s0x6b129838f39a743f:0x3017d681632a850!8m2!3d-33.8688197!4d151.2092955">
+                        Sydney
+                    </a>
+                </li>
+            </ul>
+
+        </ul>
+    </div>
+
+    <br>
+    <br>
+
+    <div>
+        <h2>Upcoming Classes</h2>
+        <table align="center">
+            <tr>
+                <th>Location</th>
+                <th>Topic</th>
+            </tr>
+            <tr>
+                <td>New York</td>
+                <td>Javascript & JQuery</td>
+            </tr>
+            <tr>
+                <td>San Francisco</td>
+                <td>HTML & CSS</td>
+            </tr>
+        </table>
+    </div>
+
+    <br>
+    <br>
+
+    <div>
+        <h2>Sign Up!</h2>
+        <form action="/action_page.php">
+            <label for="name">Name : </label>
+            <input type="text" id="name" name="name"><br>
+
+            <label for="email">Email : </label>
+            <input type="email" id="email" name="email"><br>
+
+            <label for="location">Location : </label>
+            <select name="location" id="location">
+                <option value="San Francisco">San Francisco</option>
+                <option value="New York">New York</option>
+            </select><br>
+
+            <fieldset>
+                <legend>Gender : </legend>
+                <label for="male">Male</label>
+                <input type="radio" name="male" id="male">
+                <label for="female">Female</label>
+                <input type="radio" name="female" id="female">
+            </fieldset>
+
+            <label for="experience">Experience : </label><br>
+            <textarea name="experience" id="experience" cols="20" rows="3"></textarea>
+
+            <br>
+
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+
+</body>
+
+</html>

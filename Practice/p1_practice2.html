@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+    <title>1013) practice2</title>
+</head>
+
+<body>
+
+    <h1>Employee Interests Survey form</h1>
+
+    <form action="/action_page.php">
+
+        <div>
+            <label for="name"> Enter your name : </label>
+            <input type="text" id="name" name="name">
+        </div>
+
+        <br><br>
+
+        <div>
+            <label for="depertment"> Enter your depertment : </label>
+            <input type="text" id="depertment" name="depertment">
+        </div>
+
+        <br><br>
+
+        <div>
+            <label for="selfPR">Tell us a little about yourself : </label>
+            <textarea name="selfPR" id="selfPR" cols="30" rows="5"></textarea>
+        </div>
+
+        <br><br>
+
+        <div>
+            <label for="exercise">Do you exercise at home?</label>
+            <input type="radio" name="exercise" id="yes" value="Yes">
+            <label for="yes">Yes</label>
+            <input type="radio" name="exercise" id="no" value="No">
+            <label for="no">No</label>
+        </div>
+
+        <br><br>
+
+        <div>
+            <label for="fav_topic"> How do you like to read about favorite topic?</label>
+            <br><br>
+            <input type="checkbox" name="fav_topic" id="books" value="Books">
+            <label for="books">Books </label>
+            <input type="checkbox" name="fav_topic" id="online_resources" value="Online_resources">
+            <label for="online resources">Online resources </label>
+            <input type="checkbox" name="fav_topic" id="phone_apps" value="Phone_apps">
+            <label for="phone apps">Phone apps </label>
+            <input type="checkbox" name="fav_topic" id="magazines" value="Magazines">
+            <label for="magazines">Magazines </label>
+        </div>
+
+        <br><br>
+
+        <div>
+            <label for="location">What genre of movies do you like? </label>
+            <select name="location" id="location">
+                <option value="comedy">comedy</option>
+                <option value="romance">romance</option>
+                <option value="thriller">thriller</option>
+                <option value="horror">horror</option>
+                <option value="action">action</option>
+            </select>
+        </div>
+
+        <br><br>
+
+        <input type="submit" value="Sign Up" >
+    </form>
+</body>
+
+</html>
