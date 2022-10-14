@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* letter-spacing 문자 간격 */
+        h1 {
+            letter-spacing: 10px;
+        }
+
+        p.indent {
+            text-indent: 50px;
+        }
+
+        /* line-height 줄간격 */
+        p.small {
+            line-height: 0.7;
+        }
+
+        p.big {
+            line-height: 1.8;
+        }
+
+        /* nowarp 다음 line으로 넘기지 않음.*/
+        p.nowrap {
+            white-space: nowrap;
+            /* white-space  : 빈공간, space공간 */
+        }
+
+        /* text shadow */
+        h1.shadow {
+            text-shadow: 2px 2px;
+            /* 시계방향으로 px값을 정해줌. */
+        }
+    </style>
+    <title>CSS text line spacing</title>
+</head>
+
+<body>
+
+    <h1>Using text-indent</h1>
+
+    <p class="indent">In my younger and more vulnerable years my father gave me some advice that I've been turning over
+        in my mind ever
+        since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world
+        haven't had the advantages that you've had.'</p>
+
+    <h1>Using line-height</h1>
+
+    <p>
+        This is a paragraph with a standard line-height.<br>
+        The default line height in most browsers is about 110% to 120%.<br>
+    </p>
+
+    <p class="small">
+        This is a paragraph with a smaller line-height.<br>
+        This is a paragraph with a smaller line-height.<br>
+    </p>
+
+    <p class="big">
+        This is a paragraph with a bigger line-height.<br>
+        This is a paragraph with a bigger line-height.<br>
+    </p>
+
+    <h1>Using white-space</h1>
+
+    <p class="nowrap">
+        This is some text that will not wrap.
+        This is some text that will not wrap.
+        This is some text that will not wrap.
+        This is some text that will not wrap.
+        This is some text that will not wrap.
+        This is some text that will not wrap.
+        This is some text that will not wrap.
+        This is some text that will not wrap.
+        This is some text that will not wrap.
+    </p>
+
+    <h1 class="shadow">Text-shadow effect!</h1>
+
+</body>
+
+</html>
