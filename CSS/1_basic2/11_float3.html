@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div {
+            border: 3px solid green;
+            padding: 5px;
+        }
+
+        .img1 {
+            float: right;
+        }
+        .img2 {
+            float: right;
+        }
+
+        /* 이미지가 overflow됨, 부모 div의 width를 이미지를 포함하도록 지정함.*/
+        /* .clearfix {
+            overflow: auto;
+        } */
+
+        .clearfix::after {      /* ::after  :  */
+            content: "";
+            clear: both;        /* float를 left, right 모두 제거 */
+            display: table;     /* table : table 형식으로 보여줌. */
+        }
+    </style>
+    <title>float clearfix hack</title>
+</head>
+
+<body>
+
+    <h2>Without Clearfix</h2>
+
+    <p>This image is floated to the right. It is also taller than the element containing it, so it overflows outside of
+        its container:</p>
+
+    <div>
+        <img class="img1" src="../imgs/pineapple.jpg" alt="Pineapple" width="170" height="170">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+    </div>
+
+    <!-- 
+        clear:riget;를 해서 지정된 float을 적용하지 않음.
+     -->
+    <h2 style="clear:right">With Clearfix</h2>
+    <p>We can fix this by adding a clearfix class with overflow: auto; to the containing element:</p>
+
+    <div class="clearfix">
+        <img class="img2" src="../imgs/pineapple.jpg" alt="Pineapple" width="170" height="170">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...
+    </div>
+
+</body>
+
+</html>

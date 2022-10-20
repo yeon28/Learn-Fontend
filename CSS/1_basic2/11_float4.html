@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* 해당 문서 html의 기본 배경 css 설정 */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-color: whitesmoke;
+        }
+
+        /* header와 footer의 공통 css지정 */
+        .header, .footer{
+            color: aliceblue;
+            background-color: gray;
+            padding: 15px;
+
+        }
+
+        /* 세로로 정렬된 문서 css */
+        .column {
+            float: left;
+            padding: 15px;
+        }
+        .clearfix::after { /* 웹페이지 바디 부분에 clearfix값 주기. */
+            content: "";
+            clear: both;    
+            display: table; 
+        }
+
+        
+        /* 메뉴와 컨텐츠 화변비 설정 */
+        .manu {
+            width: 25%;
+        }
+        .content {
+            width: 75%;
+        }
+
+        /* 메뉴 리스트 css 설정 */
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            padding: 8px;
+            margin-bottom: 10px;
+            width: 120px;
+            background-color: rgba(16, 153, 250, 0.1);
+        }
+
+        .menu li:hover { /* 메뉴 리스트에 마우스를 올렸을 때, css 변화 */
+            background-color: rgb(46, 166, 252);
+            color: aliceblue;
+        }
+        
+
+        
+    </style>
+    <title>float example</title>
+</head>
+
+<body>
+
+    <!-- header -->
+    <div class="header">
+        <h1>Chania</h1>
+    </div>
+
+    <!-- body -->
+    <div class="clearfix">
+        <!-- menu -->
+        <div class="column menu">
+            <ul>
+                <li>The Flight</li>
+                <li>The City</li>
+                <li>The Island</li>
+                <li>The Food</li>
+            </ul>
+        </div>
+
+        <!-- contents -->
+        <div class="column content">
+            <h1>The City</h1>
+            <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts,
+                the old town and the modern city.</p>
+            <p>You will learn more about web layout and responsive web pages in a later chapter.</p>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <p>Footer Text</p>
+    </div>
+
+</body>
+
+</html>
