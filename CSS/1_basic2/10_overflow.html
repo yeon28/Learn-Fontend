@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div {
+            /* 
+                overflow    : 원래 width, height 영역 밖으로 보여지는 것.
+
+                visible     : 컨텐츠가 영역 밖으로 넘침을 허용함.
+                hidden      : 넘친 컨텐츠를 숨김.
+                scroll      : scroll을 상하좌우로 생성해 넘친 컨테츠를 보여줌.(overflow에 상관업이 scroll을 생성함.)
+                auto        : overflow가 되면 상하좌우 필요한 scroll이 생성되고, overflow되지 않으면 아무것도 생성되지 않음.
+                    
+                => overflow는 auto로 사용하는 것을 추천함. 
+            */
+
+            /* overflow: visible; */
+            /* overflow: hidden; */
+            /* overflow: scroll; */
+            overflow: auto;
+
+            width: 200px;
+            height: 100px;
+            background-color: coral;
+            border: 1px solid black;
+        }
+    </style>
+    <title>overflow </title>
+</head>
+
+<body>
+    <h2>Overflow: visible</h2>
+
+    <p>By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's box:</p>
+
+    <div>You can use the overflow property when you want to have better control of the layout. The overflow property
+        specifies what happens if content overflows an element's box.</div>
+
+</body>
+
+</html>
