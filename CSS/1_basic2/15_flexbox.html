@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .flex-container {
+            /* 
+                display: flex;
+                => 해당 값을 준 elemnt의 자식에는 영향을 주지 않음.
+            */
+            display: flex;
+
+            /* flex-direction: column; */ 
+            /* => column 세로 정렬 */
+            /* flex-direction: row; */
+            /* => row 가로 정렬 */
+
+            background-color: #1E90FF;
+        }
+
+        .flex-container div {
+            width: 33%;
+
+            margin: 10px;
+            padding: 20px;
+
+            font-size: 30px;
+            text-align: center;
+
+            background-color: #F1F1F1;
+        }
+    </style>
+    <title>flexbox</title>
+</head>
+
+<body>
+
+    <h1>Create a Flex Container</h1>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+
+    <p>A Flexible Layout must have a parent element with the <em>display</em> property set to <em>flex</em>.</p>
+
+    <p>Direct child elements(s) of the flexible container automatically becomes flexible items.</p>
+
+</body>
+
+</html>
