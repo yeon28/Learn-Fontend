@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* 
+            z-index     : element의 z 좌표의 위치를 사용자가 임의로 바꿔주는 css
+
+                => z축을 기준으로 element들이 적층 됨. 이 순서를 바꿀 수 있음.
+                    -1로 가장 밑으로 element를 위치를 지정 수 있음.
+        */
+
+        img.work {
+            position: absolute;
+            left: 0;
+            top: 0%;
+            z-index: -1;
+        }
+
+        img.paper {
+            position: absolute;
+            left: 0;
+            top: 0%;
+            z-index: -2;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .black-box {
+            position: relative;
+            z-index: 1;
+            border: 2px solid black;
+            height: 100px;
+            margin: 30px;
+        }
+
+        .gray-box {
+            position: absolute;
+            z-index: 3;
+            /* gray box will be above both green and black box */
+            background: lightgray;
+            height: 60px;
+            width: 70%;
+            left: 50px;
+            top: 50px;
+        }
+
+        .green-box {
+            position: absolute;
+            z-index: 2;
+            /* green box will be above black box */
+            background: lightgreen;
+            width: 35%;
+            left: 270px;
+            top: -15px;
+            height: 100px;
+        }
+    </style>
+    <title>z-index css</title>
+</head>
+
+<body>
+    <h1>This is a heading</h1>
+    <img class="work" src="../imgs/work.png">
+    <img class="paper" src="../imgs/paper.jpg">
+
+    <p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+
+    <br><br><br><br><br><br><br><br><br>
+    <hr> <br>
+
+    <h1>Z-index Example</h1>
+
+    <p>An element with greater stack order is always above an element with a lower stack order.</p>
+
+    <div class="container">
+        <div class="black-box">Black box (z-index: 1)</div>
+        <div class="gray-box">Gray box (z-index: 3)</div>
+        <div class="green-box">Green box (z-index: 2)</div>
+    </div>
+
+</body>
+
+</html>
