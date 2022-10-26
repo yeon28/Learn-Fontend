@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../script/myScript.js"></script>
+    <title>output JS ) Let </title>
+</head>
+
+<body>
+    <h1>JavaScript Let</h1>
+
+    <p>In this example, x, y, and z are variables.</p>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        // let 선언 사용 : let은 Es6(2015년)에 출시
+        // => var 대신 let 사용을 권장함.
+        let x;
+        x = 5;
+        let y = 6;
+        // var x = 10; //=> let은 중복 변수 선언 error 발생함.
+        let z = x + y + 0.5;
+        // z = "hello, javascript" //=> 변수에 데이터 타입이 다른 값을 넣으면, 다른 타입의 데이터로 변경됨.
+        document.getElementById("demo").innerHTML =
+            "The value of z is: " + z;
+        document.getElementById("demo1").innerHTML =
+            "The type of z is: " + typeof z;
+    </script>
+
+
+</body>
+
+</html>

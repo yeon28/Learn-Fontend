@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 웹브라우저가 html 파일 실행 순서
+    1. head 태그에서 선언된 style과 script로 선언된 내용을 해석해서 갖고 있음.
+        => 단, body에 html element의 객체가 생성되기 전에 
+        js로 객체 필드값을 변경하면 효과 없어짐. 
+    2. body 태그에서 html element들을 순서대로 생성해 메모리에 올림.
+    3. body 태그 안에 작성된 js 코드를 html elemnet가 생성된 경우 적용함.
+    4. 웹브라우저 화면에 css, js 내용을 적용해 결과를 보여줌. 
+ -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // function     : 함수, java의 매서드와 비슷한 형식함.
+        // => JS에는 function과 method 둘 다 있음.
+        function myFunction() {
+            document.getElementById('demo1').innerHTML = "head 태그에서 function 선언하여 실행"
+        }
+    </script>
+
+    <!-- head 태그에서 script 외부 파일 선언을 권장함. -->
+    <script src="../script/myScript.js"></script>
+    <title>Script</title>
+</head>
+
+<body>
+
+    <h2>JavaScript in Body</h2>
+
+    <!-- script를 body tag에서 실행할 태그 보다 먼저 실행되면 웹브라우저에서 작동하지 않음.-->
+    <!-- <script>
+        document.getElementById("demo").innerHTML = "My First JavaScript";
+    </script> -->
+
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML = "My First JavaScript";
+    </script>
+
+<hr> 
+
+    <p id="demo1">head tag에서 script tag 사용 예시</p>
+    <button type="button" onclick="myFunction()">Try it</button>
+
+    <p id="demo2">외부 파일에서 script tag 사용 예시</p>
+    <button type="button" onclick="myFunction2()">외부 JS file 선언 테스트</button>
+
+    <!-- 
+        script 태그 안에서 js 코딩 할 수 있음.
+        => script 태그는 head, body 어디서든 사용 가능함.(body의 맨 마지막에 선언 권장)
+           +) external file로 선언하여 사용가능.
+     -->
+    
+
+</body>
+
+</html>

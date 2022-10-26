@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../script/myScript.js"></script>
+    <title>output JS ) const </title>
+</head>
+
+<body>
+    <h1>JavaScript Const</h1>
+
+    <p>In this example, x, y, and z are variables.</p>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        // const 선언 사용 : const은 Es6(2015년)에 출시
+        // => 상수를 선언할 때 사용함.
+        
+        // - 오래된 웹브라우저에서 var만 사용 가능할 경우
+        //   let const로 만든 es6 js 파일로 자동 변환해주는 tool 있음(--> babel).
+        const x = 5;
+        const y = 6;
+        // const x = 10; //=> const은 중복 변수 선언 error 발생함.
+        const z = x + y + 0.5;
+        // z = "hello, javascript" 
+        // z = 10 
+        //=> 변수에 데이터 타입이 다른 값을 넣으면, 웹브라우저 dev tool console에 error 발생함..
+        document.getElementById("demo").innerHTML =
+            "The value of z is: " + z;
+        document.getElementById("demo1").innerHTML =
+            "The type of z is: " + typeof z;
+    </script>
+
+
+</body>
+
+</html>
