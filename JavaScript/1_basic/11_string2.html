@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS data type String</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Strings</h1>
+    <h2>The slice() Method</h2>
+
+    <p>The sliced (extracted) part of the string is:</p>
+    <p id="demo"></p>
+
+    <script>
+        let text = "Apple, Banana, Kiwi"
+        let part = text.slice(7, 13);
+
+        document.getElementById("demo").innerHTML = "문자열 7번째부터 13번째까지 출력 : " + part;
+    </script>
+
+    <hr>
+
+    <h1>JavaScript String Methods</h1>
+    <p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+
+    <p id="demo1">Please visit Microsoft!</p>
+    <button onclick="myFunction1()">--> Try it</button>
+
+
+    <p id="demo2">버튼 실행 전!</p>
+    <button onclick="myFunction2()">--> Try it</button>
+
+
+    <p id="demo3">반복된 단어는 첫번째 단어만 replace됨. <br> 주의 주의</p>
+    <button onclick="myFunction3()">--> Try it</button>
+
+    <script>
+
+        // /MICROSOFT/i   : regular expression(정규표현식)
+        //      => i      : ignore, 대소문자 무시
+        function myFunction1() {
+            let text = document.getElementById("demo1").innerHTML;
+            console.log('text = ', text)
+            document.getElementById("demo1").innerHTML 
+                = text.replace(/MiCROsOFT/i, "W3Schools");
+        }
+        function myFunction2() {
+            let text = document.getElementById("demo2").innerHTML;
+            console.log('text = ', text)
+            document.getElementById("demo2").innerHTML
+                = text.replace("버튼 실행 전", "버튼 실행 후");
+        }
+
+        function myFunction3() {
+            let text = document.getElementById("demo3").innerHTML;
+            console.log('text = ', text)
+            document.getElementById("demo3").innerHTML
+                = text.replace("주의", "첫번째만 replace!!");
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

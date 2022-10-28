@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS event</title>
+</head>
+<!-- 
+    onload  : 웹브라우저가 발생시키는 event
+        => JS엔진이 html문서 안에 있는 모든 html element들을 객체로 만든 후 
+            웹브라우저에 html element들을 display하기 전 자동 호출함.
+    
+    event handler
+    : event가 발생할 때 처리되는 함수(function)
+ -->
+<body onload="myFunction()">
+    
+    <h1>JS onload event</h1>
+
+    <script>
+        function myFunction() {
+            alert("Page is loaded :-)")
+        }
+    </script>
+</body>
+</html>

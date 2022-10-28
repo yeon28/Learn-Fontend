@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS data type String </title>
+</head>
+
+<body>
+    <h1>JavaScript Strings</h1>
+    <h2>The length Property</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        // string property 중에 length(문자전체갯수)가 존재함.
+        document.getElementById("demo").innerHTML = "The length of the string is : " + text.length;
+    </script>
+
+<hr>
+
+    <p id="demo1"></p>
+
+    <p id="demo2"></p>
+
+    <script>
+
+        let x = "John"; // -> string
+
+        // JS에서 new + function(함수)Constructor(생성자)를 생성하면 object가 생성됨.
+
+        let y = new String("John") // -> object
+        // => String 기능을 하는 object 생성함.   
+        //      이렇게 사용 가능하지만, 사용하지 않는 것을 권장함.
+
+        document.getElementById("demo1").innerHTML = 
+        "x의 데이터타입 : " + typeof x + "<br>" + "y의 데이터타입 : " + typeof y;
+
+        // a == b를 실행할 때, a와 b의 데이터 타입을 자동형변환해 비교함.
+        //  object인 y를 String으로 자동형변환해 true 값을 리턴함.
+        document.getElementById("demo2").innerHTML = "x == y의 결과값 : " + (x == y);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS data type String</title>
+</head>
+
+<body>
+
+    <h2>JavaScript Numbers</h2>
+
+    <p>JavaScript will try to convert strings to numbers when dividing:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        let x = "100";
+        let y = "10";
+
+        // 문자열 / 문자열 
+        //      => 나누기 연산자에서는 문자열을 숫자로 자동 형변환해
+        //           숫자로 계산해 리턴함.
+        //      => 문자열이 숫자로 변환되지 않으면 NaN(Not a Number)를 리턴함.
+        //          ex) NaN / 10 ==> NaN
+        let z = x / y;
+        // let z = x * y;
+        // let z = x - y;
+
+        // + 은 자동 형변환 하지 않음
+        // let z = x + y;
+
+        document.getElementById("demo").innerHTML = z; 
+    </script>
+
+
+    <hr>
+
+    <h2>JavaScript Numbers</h2>
+
+    <p>You can use the global JavaScript function isNaN() to find out if a value is not a number:</p>
+
+    <p id="demo2"></p>
+
+    <script>
+        let a = 100 / "Apple"; // => NaN
+        // isNaN()  :Not a Number 이면 true, 아니면 false 리턴.
+        document.getElementById("demo2").innerHTML = isNaN(a);
+        
+        // NaN의 type은 number.
+        document.getElementById("demo2").innerHTML = typeof a;
+        
+    </script>
+
+    <!-- 
+        1. NaN
+            => typeof NaN : number 
+        2. infinity, -infinity
+            => typeof Infinity : number 
+     -->
+</body>
+
+</html>

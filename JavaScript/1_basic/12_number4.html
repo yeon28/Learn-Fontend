@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS data type String</title>
+</head>
+
+<body>
+
+    <h2>JavaScript Global Methods</h2>
+    
+    <p>The Number() method converts variables to numbers:</p>
+    
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML =
+        Number(true) + "<br>" +             // 1
+        Number(false) + "<br>" +            // 0
+        Number("10") + "<br>" +             // 10
+        Number("  10") + "<br>" +           // 10
+        Number("10  ") + "<br>" +           // 10
+        Number("  10  ") + "<br>" +         // 10
+        Number("10.33") + "<br>" +          // 10.33
+        Number("10,33") + "<br>" +          // NaN
+        Number("10 33") + "<br>" +          // NaN
+        Number("John");                     // NaN
+    </script>
+
+<h2>JavaScript Global Methods</h2>
+
+<p>The Number() method can convert a date to a number:</p>
+
+<p id="demo1"></p>
+
+<!-- 
+    1970년 01월 01일 0시 0분 0초를 기준으로 숫자로 변환함.
+    (1day : 24시간 * 60분 * 60초 * 1000ms)
+
+    +) Java, JSm, C, Cpp, Oracle 모두 적용되는 규칙임.
+ -->
+<script>
+    let x = new Date("1970-01-02");
+    document.getElementById("demo1").innerHTML = "Date를 숫자로 변환 : " + Number(x);
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS data type String</title>
+</head>
+
+<body>
+
+    <h2>JavaScript Template Literals</h2>
+
+    <p>Template literals use back-ticks (``) to define a string:</p>
+
+    <p id="demo"></p>
+
+    <p>Template literals are not supported in Internet Explorer.</p>
+
+    <script>
+        // `` (back tick) 
+
+        // 1. string문자열에서 사용 가능(''  "" ``).
+        // let text = `Hello world!`;
+
+        // 2. '' "" 둘 다 사용 가능함.
+        // let text = `He's often called "Johnny"`;
+
+        // 3. 멀티 line에 적용 가능함. (""을 사용할 경우 + <br> 를 사용해야함.)
+        // let text =
+        //     `The quick
+        //      brown fox
+        //      jumps over
+        //      the lazy dog`;
+
+        // 4. ${변수명}으로 변수 값을 읽어올 수 있음.
+        //      => 이 기능을 사용하기 위해 ``을 사용하는 것.
+        // let firstName = "John";
+        // let lastName  = "Doe";
+        // let text = `Wellcome ${firstName}, ${lastName} :-)`
+
+        // 5. 변수들로 ``안에서 ${수식}을 넣어 연산 가능함.
+        // let price = 10;
+        // let VAT = 0.25;
+        // let text = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+
+        // 6. ``안에 ${변수명 or 수식}을 넣어 html코드 작성 가능함.
+        let header = "Templates Literals";
+        let tags = ["template literals", "javascript", "es6"];
+       
+        let html = `<h2>${header}</h2><ul>`; // 변수 header를 h2 태그에 넣고 unordered lIst(ul) tag 열기..
+        for (const x of tags) { // 변수 x에 tag[0]부터 tag[2]까지 입력함.
+            html += `<li>${x}</li>`; // x를 리스트(li)로 html에 차례로 넣음.
+        }
+        html += `</ul>`; // ul 태그 닫기.
+        document.getElementById("demo").innerHTML = html;
+
+        // document.getElementById("demo").innerHTML = text;
+    </script>
+
+</body>
+
+</html>

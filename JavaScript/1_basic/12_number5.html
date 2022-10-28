@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS data type String</title>
+</head>
+
+<body>
+
+    <h2>JavaScript Global Functions</h2>
+    <h2>parseInt()</h2>
+    <p>The global JavaScript function parseInt() converts strings to numbers:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        // parseInt()   : 정수값으로 변환한 메소드, 실수값은 소수점 제거함.
+        //      => 최대한 정수값으로 변환하려고함.
+        document.getElementById("demo").innerHTML =
+            parseInt("-10") + "<br>" +        // -10
+            parseInt("-10.33") + "<br>" +     // -10
+            parseInt("10") + "<br>" +         // 10 
+            parseInt("10.33") + "<br>" +      // 10 
+
+            parseInt("10 6") + "<br>" +       // 10
+            // ==> NaN으로 출력하지않고 읽을 수 있는 정수까지 최대한 읽어옴.
+            parseInt("10 years") + "<br>" +   // 10
+            // ==> 정수만 출력하고 문자를 버림.
+            parseInt("years 10");             // NaN
+            // ==> 문자가 먼저 인식되면 NaN 출력
+    </script>
+
+
+
+    <h2>JavaScript Global Methods</h2>
+
+    <p>The parseFloat() method converts strings to numbers:</p>
+
+    <p id="demo2"></p>
+
+    <script>
+        // parseFloat()   : 실수값으로 변환함.
+        //      => global function(method)
+        //      => Number function costructor
+        document.getElementById("demo2").innerHTML =
+            parseFloat("10") + "<br>" +         // 10
+            parseFloat("10.33") + "<br>" +      // 10.33
+            parseFloat("10 6") + "<br>" +       // 10
+            parseFloat("10 years") + "<br>" +   // 10
+            parseFloat("years 10");             // NaN
+    </script>
+
+</body>
+
+</html>
