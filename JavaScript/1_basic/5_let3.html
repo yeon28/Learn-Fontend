@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../script/myScript.js"></script>
+    <title>output JS ) Let </title>
+</head>
+
+<body>
+
+    <h2>JavaScript Hoisting</h2>
+
+    <p>With <b>var</b>, you can use a variable before it is declared:</p>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+
+    <script>
+        // hoisting :
+        // var을 사용하여 변수 선언한 것이 변수 사용보다 나중에 존재해도 
+        // JS engine이 실행될 때, 소스코드 내부에서 나중에 선언된 변수 사용 전으로 자동 끌어올림.
+        // ==> hoisting
+        carName = "Volvo";
+        document.getElementById("demo").innerHTML = carName;
+        document.getElementById("demo2").innerHTML = typeof carName;
+        var carName;    // var 변수 선언
+    </script>
+
+
+    <p id="demo3"></p>
+
+    <script>
+        // let으로 선언된 변수는 hoisting 발생 없이 error 발생함.
+        carName1 = "Volvo";
+        document.getElementById("demo3").innerHTML = carName1;
+        let carName;    // let 변수 선언
+    </script>
+</body>
+
+</html>

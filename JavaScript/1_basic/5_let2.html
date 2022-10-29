@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../script/myScript.js"></script>
+    <title>output JS ) Let </title>
+</head>
+
+<body>
+
+    <h2>Redeclaring a Variable Using var</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        var a = 10;
+        // let a = 20; // console error 발생
+        //==> Uncaught SyntaxError: Identifier 'a' has already been declared
+
+        let x = 10;      // global variable
+        // Here x is 10
+
+        //let x = 5;      // error
+
+        {
+            // block scope에서 선언된 x는 global scope에서 선언된 x와 다른 변수로 취급되어 메모리에 올라가 사용됨.
+            let x = 2;   // local variable
+            // Here x is 2
+        }
+
+        // Here x is 10
+        document.getElementById("demo").innerHTML = x;
+    </script>
+
+</body>
+
+</html>
