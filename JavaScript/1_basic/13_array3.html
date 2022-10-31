@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS array ) isArray, instanceof </title>
+</head>
+
+<body>
+
+    <h2>JavaScript Arrays</h2>
+
+    <p>The typeof operator, when used on an array, returns object:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        // typeof를 array에서 적용하면 array가 나오지 않고, object가 나옴.
+        // ==> .isArray() 또는 instanceof 를 사용해야하는 이유임.
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo").innerHTML = typeof fruits;  // object
+
+        // 해결1) .isArray() 사용하기.
+        document.getElementById("demo").innerHTML = Array.isArray(fruits);  // true
+
+        // 해결2) instanceof 사용하기.
+        document.getElementById("demo").innerHTML = fruits instanceof Array;  // true
+        
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS comparison</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Comparison</h1>
+    <h2>The == Operator</h2>
+
+    <p>Assign 5 to x, and display the value of the comparison (x == 8):</p>
+
+    <p id="demo"></p>
+    <!-- 
+        비교연산자 (== > < <= >= != ...) 연산할 때, 한 쪽이 number이면 다른쪽을 number로 변환함. 
+            => "5"는 Number("5")로 자동 형변환.
+     -->
+    <script>
+        let x = 5;
+        // document.getElementById("demo").innerHTML = (x == 8);    // false
+        // document.getElementById("demo").innerHTML = (x == "5");  // true
+        
+        /* 
+            ===  : java의 '==' 동일
+            === true 조건)
+            1.  양쪽의 데이터 타입이 동일하고 value도 같은 경우.
+            2. 숫자가 아닌 경우에 Number로 자동형변환 안 시키고 비교함.
+        */
+        document.getElementById("demo").innerHTML = (x === "5");  // true
+    </script>
+
+</body>
+
+</html>

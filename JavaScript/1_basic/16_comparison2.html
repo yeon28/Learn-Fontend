@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS comparison</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Operators</h1>
+    <h2>The ?? Operator</h2>
+    <p>The ?? operator returns the first argument if it is null or undefined. Otherwise it returns the second.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        let name = null;
+        let text = "missing";
+        // A ?? B   : A가 null이나 undefined이면 B를 실행함. 아닌 경우에는 name을 실행함.
+        // let result = name ?? text;
+
+        /* 
+            A || 'missing'   => Boolean(null) || 'missing'   => false    || 'missing'
+            1. A || B 연산식에서 a가 false면 b실행.
+            2. A && B 연산식에서 a가 true이면 B실행.
+         */
+        let result = name || text;
+
+        document.getElementById("demo").innerHTML = "The name is " + result; 
+    </script>
+
+    <p id="demo2"></p>
+
+    <script>
+        const car = {type: "Fiat",
+                     model: "500",
+                     color: "white"};
+        // car object에서 name property가 없어서 undefined.
+        // ?    : car object에서 name property가 없거나(undefined) null인 경우, undefined 리턴함. 
+        document.getElementById("demo2").innerHTML = car?.name; // undefined
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS array) sort, reverse </title>
+</head>
+
+<body>
+
+    <h2>JavaScript Array Sort Reverse</h2>
+    
+    <p>The reverse() method reverses the elements in an array.</p>
+    <p>By combining sort() and reverse() you can sort an array in descending order:</p>
+    
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        const points = [40, 100, 1, 5, 25, 10];
+        // 기본 sort는 원소들이 정수라도 문자열로 변환하여 정렬 수행함.
+        //  => points = ["40", "100", "1", "5", "25", "10"];
+        points.sort();  // 1,10,100,25,40,5
+
+        // java ) -> 오름차순 sorting
+        // a-b < 0   : a,b의 순서를 유지함. 
+        // a-b > 0   : a,b의 순서를 바꿔줌. 
+        points.sort(function(a, b) {return - ( a-b )}); // 100 , 40 , 25 , 10 , 5 , 1
+        
+        document.getElementById("demo1").innerHTML = points;
+    </script>
+
+</body>
+
+</html>

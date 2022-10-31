@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS array </title>
+</head>
+
+<body>
+
+    <h2>JavaScript Array.filter()</h2>
+    <p>Creates a new array with all array elements that passes a test.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const numbers = [45, 4, 9, 16, 25];
+        // filter   : myFuncion 결과값이 true인 원소값들만 output으로 나오게 만듦.
+        const over18 = numbers.filter(myFuncion);
+
+        function myFuncion(value, index, array) {
+            return value > 18;	// 45,25
+        }
+        
+        document.getElementById("demo").innerHTML = over18;
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS array forEach </title>
+</head>
+
+<body>
+
+    <h2>JavaScript Arrays</h2>
+
+    <p>Array.forEach() calls a function for each array element.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        
+        const fruits = ["Banana", "Oranage", "Apple", "Mango"]
+        
+        let text = '<ul>';
+        //  .forEach()  : array object의 method.
+        fruits.forEach(myFunction); // array의 원소 갯수만큼 myFunction() 함수를 실행함.
+        text += "</ul>";
+        
+        // array에서 function을 사용할 때 value을 항상 입력해야함.
+        function myFunction(value, index, array) { // array(=> fruits)
+            text += "<li>" + value + "</li>";
+        }
+
+        document.getElementById("demo").innerHTML = text;
+    </script>
+    
+</body>
+
+</html>
