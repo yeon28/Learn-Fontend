@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function() {
+            // $("p").on("click" ,function() {
+            //     $(this).hide();     
+            // });
+            
+            /*
+                on 매서드 안에 object를 넘겨줄 수 있음.
+                
+                .on(
+                    obejct : function(){},
+                    obejct : function(){},
+                    obejct : function(){},
+                    ...
+                ); 
+                --> 형식으로 작성함.
+            */
+            $("p").on({
+                
+                mouseenter  : function() {       
+                    $(this).css("background-color", "lightgray");},
+                    //-->  $("p").mouseenter(function(){});와 같은 의미.
+
+                mouseleave  : function() {
+                    $(this).css("background-color", "lightblue");},
+                click       : function() {
+                    $(this).css("background-color", "yellow");},
+            })
+        }); 
+    </script>
+
+    <title>jQuery event ) on()</title>
+</head>
+
+<body>
+
+    <p>Click or move the mouse pointer over this paragraph.</p>    
+
+</body>
+
+</html>

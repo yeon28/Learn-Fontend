@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#btn1").click(function() {
+                $("#test1").text(function(i, origText) {
+                    return "Old text : " + origText 
+                            + " New Text : Hello word! (index:"+ i + ")";
+                });
+            });
+            $("#btn2").click(function() {
+                $("#test2").html(function(i, origText) {
+                    return "Old html : " + origText 
+                            + " New html : Hello <b>word</b>! (index:"+ i + ")";
+                });
+            });
+        })
+
+        /*
+            function(index, original text)
+            
+            .text(function) 안에 있는 함수의 origText는 태그 데이터를 포함하지 않음.
+            .html(function) 안에 있는 함수의 origText는 태그 데이터를 포함함.
+        */
+    </script>
+
+    <title>jQuery HTML) Set contents </title>
+</head>
+
+<body>
+
+    <p id="test1">This is a <b>bold</b> paragraph.</p>
+    <p id="test2">This is another <b>bold</b> paragraph.</p>
+    
+    <button id="btn1">Show Old/New Text</button>
+    <button id="btn2">Show Old/New HTML</button>
+    
+</body>
+
+</html>

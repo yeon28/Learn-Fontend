@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $(".hidNshw").hide(500);  //css) display: none;
+            });
+            $("#show").click(function () {
+                $(".hidNshw").show(1000);  //css) display: block;
+            });
+
+            // $(selector).toggle(speed,callback); -> 형식
+            $("#toggle").click(function() {
+                $(".toggle").toggle(500);
+            })
+        })
+    </script>
+
+    <style>
+        div{
+            height: 100px;
+            background-color: lightgray;
+            border-radius: 5px;
+            padding: 5px;
+            margin-top: 5px;
+        }
+    </style>
+
+    <title>jQuery effects) hide&show</title>
+</head>
+
+<body>
+
+    <h1>hide() and show() event</h1>
+
+    <button id="hide">Hide(500)</button>
+    <button id="show">Show(1000)</button>
+    
+    <div class="hidNshw">
+        <p>If you click on the "Hide" button, I will disappear.</p>
+    </div>
+    
+
+    <br><br>
+    
+    <hr>
+
+    <br>
+
+    <h1>toggel() event</h1>
+
+    <button id="toggle">Toggle(500)</button>
+    
+    <div class="toggle">
+        <p>This is a paragraph with little content.</p>
+        <p>This is another small paragraph.</p>
+    </div>
+
+</body>
+
+</html>

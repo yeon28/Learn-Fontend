@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Async callback</title>
+</head>
+<body>
+
+    <h2>JavaScript Callbacks</h2>
+    
+    <p>Do a calculation and then display the result.</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+    function myDisplayer(something) {
+      document.getElementById("demo").innerHTML = something;
+    }
+    
+    // callback function    : function의 parameter에 넘긴 function을 말함.
+    //      => parameter로 넘긴 function은 내부에서 다시 실행함.(call back)
+    function myCalculator(num1, num2, myCallback){
+        let sum = num1 + num2;
+        myCallback(sum); // myCallback은 myDisplayer(something)으로 웹브라우저에 dispaly될 부분임.
+    }
+
+    // parameter로 function을 넘김.(-> high order function)
+    myCalculator(5, 5, myDisplayer);
+    </script>
+    
+</body>
+</html>

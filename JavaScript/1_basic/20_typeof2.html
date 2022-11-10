@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS typeof</title>
+</head>
+<body>
+
+    <h1>JavaScript Properties</h1>
+    <h2>The constructor Property</h2>
+    
+    <p>The constructor property returns the constructor function for a variable or an 
+    object.</p>
+    
+    <!-- 
+        data type을 확인할 때, typeof를 사용하지 말고, constructor 사용을 권장함.
+        => constructor ) java의 클래스와 같은 개념으로, 
+            function 선언한 것으로 function constrcutor라고 부르고new object로 만듦.
+     -->
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML = 
+        "john".constructor + "<br>" +
+        // function String() { [native code] }
+        (3.14).constructor + "<br>" +
+        // function Number() { [native code] }
+        false.constructor + "<br>" +
+        // function Boolean() { [native code] }
+        [1,2,3,4].constructor + "<br>" +
+        // function Array() { [native code] }
+        {name:'john', age:34}.constructor + "<br>" +
+        // function Object() { [native code] }
+        new Date().constructor + "<br>" +
+        // function Date() { [native code] }
+        function () {}.constructor;
+        // function Function() { [native code] }
+    </script>    
+   
+</body>
+</html>

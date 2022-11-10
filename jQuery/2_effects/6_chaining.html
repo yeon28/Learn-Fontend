@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                // chaining : 실행하고자 하는 method들을 연달아 사용하는 방법.
+                $("#p1")
+                .slideUp(500)
+                .slideDown(500)
+                .css("color", "red");
+                    
+                /*=> 아래 코드와 같은 효과.
+                    $("#p1").css("color", "red");
+                    $("#p1").slideUp(500);
+                    $("#p1").slideDown(500);
+                */
+            });
+        });
+    </script>
+
+    <title>jQuery effects) method chaining </title>
+</head>
+
+<body>
+
+    <p id="p1">jQuery is fun!!</p>
+
+    <button>Click me</button>
+
+</body>
+
+</html>

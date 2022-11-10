@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS event</title>
+</head>
+
+<body>
+
+    <h2>JavaScript addEventListener()</h2>
+
+    <p>This example uses the addEventListener() method to attach a click event to a button.</p>
+
+    <button id="myBtn">Try it</button>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        /*  
+            addEventListner     : event 등록 method
+            1. event 이름에 'on'이 없음.
+            2. 하나의 element에 동일한 event를 여러개 등록 가능함.
+                => ex) click event를 여러개 등록 가능함.
+            3. 하나의 element에 다른 event를 여러개 등록 가능함.
+            4. removeEventListner("click", myFunction);을 통해 등록된 event 삭제 가능함.
+        */
+        document.getElementById("myBtn").addEventListener("click", displayDate, false);
+        document.getElementById("myBtn").addEventListener("click", displayHello, false);
+
+        function displayDate() {
+            document.getElementById("demo").innerHTML = Date();
+        }
+
+        function displayHello() {
+            document.getElementById("demo1").innerHTML = "hello, 2nd click!";
+        }
+    </script>
+
+</body>
+
+</html>

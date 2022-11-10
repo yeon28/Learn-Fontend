@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS html DOM element</title>
+    <script>
+        // document.forms["myForm"]["fname"] => <input type="text" name="fname">의
+        // x의 데이터 타입은 String임.
+        function validateForm() {
+            let x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>JavaScript Validation</h2>
+
+    <!-- 
+        onsubmit attribute   : event로 submit 버튼을 클릭히면 실행되는 attribute 
+            => onsubmit="true"이면 서버로 date전달,
+                onsubmit="false"이면 서버로 date전달 안함.
+            
+            +) 통상 id와 name를 같게 만들어줌.
+    -->
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="fname">
+        <input type="submit" value="Submit">
+    </form>
+    
+</body>
+
+</html>

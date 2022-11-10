@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS typeof</title>
+</head>
+<body>
+
+    <h1>JavaScript Arrays</h1>
+    <p>This "home made" isArray() function returns true when used on an array:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const fruits = ["Banana","Oranage" ,"Apple"];
+        // document.getElementById("demo").innerHTML = isArray(fruits);
+        document.getElementById("demo").innerHTML = Array.isArray(fruits);
+        
+        function isArray(myArray) {
+            console.log(myArray.constructor.toString());
+            console.log(myArray.constructor.toString().indexOf());
+            console.log(myArray.constructor.name);
+            // return myArray.constructor.toString().indexOf("Array") > -1;
+            return myArray.constructor.name === "Array";
+        }
+    </script>
+
+</body>
+</html>

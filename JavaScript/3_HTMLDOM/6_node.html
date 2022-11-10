@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS node</title>
+</head>
+
+<body>
+
+    <h2>JavaScript HTML DOM</h2>
+    <p>Add a new HTML Element.</p>
+
+    <div id="div1">
+        <p id="p1">This is a paragraph.</p>
+        <p id="p2">This is another paragraph.</p>
+    </div>
+
+    <button onclick="myFunction()">Remove New Paragraph</button>
+
+    <script>
+        const para = document.createElement("p");   // p태그 생성
+        const node = document.createTextNode("This is new paragraph.");   // text node 생성
+
+        para.appendChild(node); // para에 node를 자식으로 붙임.(p태그 안에 text를 자식으로 붙임.)
+
+        const element = document.getElementById("div1");    // element를 #div1로 가져옴.
+
+        element.appendChild(para);  // element에 para를 자식으로 붙임.(#div1 안에 p태그를 자식으로 붙임.)
+
+        function myFunction() {
+            para.remove();
+        }
+    </script>
+
+</body>
+
+</html>

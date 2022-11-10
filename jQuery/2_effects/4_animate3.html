@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                var div = $("div");
+
+                // query에 실행할 animate method list를 넣고, 차례로 실행함.
+                div.animate({ height: '300px', opacity: '0.4' }, "slow");
+                div.animate({ width: '300px', opacity: '0.8' }, "slow");
+                div.animate({ height: '100px', opacity: '0.4' }, "slow");
+                div.animate({ width: '100px', opacity: '0.8' }, "slow");
+            });
+        });
+    </script>
+
+    <title>jQuery effects) animate() </title>
+</head>
+
+<body>
+
+    <button>Start Animation</button>
+
+    <p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember
+        to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+    <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+</body>
+
+</html>

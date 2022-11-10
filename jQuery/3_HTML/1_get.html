@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function() {
+                // .text()  : tag안에 본문 내용만 보여줌, 태그를 뺀 나머지 
+                alert("Text : " + $("#test").text());
+            })
+            $("#btn2").click(function() {
+                // .html()  : tag안에 html 코드를 포함한 내용
+                alert("HTML : " + $("#test").html()); 
+            })
+        })
+    </script>
+
+    <title>jQuery HTML) get contents .text(), .html() </title>
+</head>
+
+<body>
+
+    <p id="test">This is some <b>bold</b> text in a paragraph.</p>
+    
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>    
+
+</body>
+
+</html>

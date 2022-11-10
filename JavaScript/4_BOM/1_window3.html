@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS BOM window open, close option</title>
+</head>
+<body>
+
+    <h2>JavaScript Window</h2>
+    
+    <p>window option open() and close().</p>
+
+    <button onclick="openWin()">open Google Site</button>
+    <button onclick="closeWin()">close Google Site</button>
+
+    <script>
+        let myWindow;
+
+        function openWin() {
+            myWindow = window.open("https://www.google.com/","","width=300,height=300");
+        }
+        function closeWin() {
+            myWindow.close();
+        }
+    </script>
+    
+</body>
+</html>

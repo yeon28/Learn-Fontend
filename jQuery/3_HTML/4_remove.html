@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                // remove   : 본인을 포함한  자식들을 모두 삭제함.
+                $("#div1").remove();
+
+                // empty    : 본인을 제외한 자식을 모두 삭제함.
+                $("#div1").empty();
+
+                // p태그 중에서 class명이 test인 element와 demo인 element를 필터링 삭제. 
+                $("p").remove(".test", ".demo");
+            });
+        });
+    </script>
+
+    <title>jQuery HTML) remove </title>
+</head>
+
+<body>
+
+    <div id="div1" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+
+        This is some text in the div.
+        <p>This is a paragraph in the div.</p>
+        <p>This is another paragraph in the div.</p>
+
+    </div>
+    <br>
+
+    <p>This is a paragraph.</p>
+    
+    <p class="test">This is another paragraph.</p>
+    <p class="test">This is another paragraph.</p>
+    
+    <p class="demo">This is p element with class="demo".</p>
+
+
+    <button>Remove element</button>
+
+</body>
+
+</html>

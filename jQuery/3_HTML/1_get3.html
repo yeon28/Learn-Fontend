@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function() {
+                // .attr("attribute")  : 매개 attribute의 내용을 가져옴. 
+                alert($("#google").attr("href"));
+                // 사용자가 새로운 attribute를 지정헤 jquery로 사용 가능함.
+                alert($("#google").attr("data-info"));
+            });
+        });
+    </script>
+
+    <title>jQuery HTML) get contents .attr() </title>
+</head>
+
+<body>
+
+    <!-- 
+        사용자가 새로운 attribute를 지정 가능함.
+        +) 작명할 때 'data-어쩌구'로 설정하는 것이 약속임.
+     -->
+    <p><a href="https://www.google.com/" id="google" data-info="this is jQuery">goolge.com</a></p>
+    
+    <button>Show href Value</button>
+    
+</body>
+
+</html>
